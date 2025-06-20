@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria de Wallpapers - Jhon Victor</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    header {
+      background-color: #111;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      font-size: 1.8em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .wallpaper-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .wallpaper-card {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .wallpaper-card:hover {
+      transform: scale(1.05);
+    }
+
+    .wallpaper-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .like-btn, .download-btn {
+      font-size: 16px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background-color: #007acc;
+      color: white;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .like-btn:hover, .download-btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      color: #aaa;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Wallpapers para Seu Desktop</h1>
+  </header>
+
+  <main>
+    <p>Explore wallpapers de jogos, filmes, séries e animes para personalizar seu desktop.</p>
+
+    <!-- Wallpapers Padrão -->
+    <section>
+      <h2>Wallpapers Padrão</h2>
+      <div class="wallpaper-grid">
+        <div class="wallpaper-card">
+          <img src="https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?cs=srgb&dl=pexels-eberhardgross-1421903.jpg&fm=jpg" alt="Wallpaper 1">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?cs=srgb&dl=pexels-eberhardgross-1421903.jpg&fm=jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+        <div class="wallpaper-card">
+          <img src="https://c1.wallpaperflare.com/preview/801/877/231/forest-tree-mist-snow.jpg" alt="Wallpaper 2">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://c1.wallpaperflare.com/preview/801/877/231/forest-tree-mist-snow.jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+        <div class="wallpaper-card">
+          <img src="https://i.pinimg.com/736x/8b/9c/e0/8b9ce035bd6d6f749e02e8d8a7dbe4b5.jpg" alt="Wallpaper 3">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://i.pinimg.com/736x/8b/9c/e0/8b9ce035bd6d6f749e02e8d8a7dbe4b5.jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jogos -->
+    <section>
+      <h2>Wallpapers de Jogos</h2>
+      <div class="wallpaper-grid">
+        <div class="wallpaper-card">
+          <img src="https://observatoriodegames.com.br/wp-content/uploads/2020/07/ellie-the-last-of-us-part-2-uhdpaper.com-4K-7.1129-1-scaled.jpg" alt="Jogo 1">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://observatoriodegames.com.br/wp-content/uploads/2020/07/ellie-the-last-of-us-part-2-uhdpaper.com-4K-7.1129-1-scaled.jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+        <div class="wallpaper-card">
+          <img src="https://i.ytimg.com/vi/0nks5Pynr4g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAy9C6nswAupFgCwhYYtYrwHdN-gw" alt="Jogo 2">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://i.ytimg.com/vi/0nks5Pynr4g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAy9C6nswAupFgCwhYYtYrwHdN-gw" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filmes -->
+    <section>
+      <h2>Wallpapers de Filmes</h2>
+      <div class="wallpaper-grid">
+        <div class="wallpaper-card">
+          <img src="https://www.mundoconectado.com.br/wp-content/uploads/2019/04/matrix-menorjpg.jpg" alt="Filme 1">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://www.mundoconectado.com.br/wp-content/uploads/2019/04/matrix-menorjpg.jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+        <div class="wallpaper-card">
+          <img src="https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/088974ed-2198-11ee-aa6e-9587410378a2/345890079_649442590532021_8425814995231854364_n.jpg" alt="Filme 2">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/088974ed-2198-11ee-aa6e-9587410378a2/345890079_649442590532021_8425814995231854364_n.jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Séries -->
+    <section>
+      <h2>Wallpapers de Séries</h2>
+      <div class="wallpaper-grid">
+        <div class="wallpaper-card">
+          <img src="https://wallpapers.com/images/hd/lucifer-devil-tom-ellis-detached-wings-ztwr57muomua5xpu.jpg" alt="Série 1">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://wallpapers.com/images/hd/lucifer-devil-tom-ellis-detached-wings-ztwr57muomua5xpu.jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+        <div class="wallpaper-card">
+          <img src="https://i.blogs.es/b62c95/last-of-us-hbo/1366_2000.jpeg" alt="Série 2">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://i.blogs.es/b62c95/last-of-us-hbo/1366_2000.jpeg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animes -->
+    <section>
+      <h2>Wallpapers de Animes</h2>
+      <div class="wallpaper-grid">
+        <div class="wallpaper-card">
+          <img src="https://wallpapersbq.com/images/elfen-lied/elfen-lied-wallpaper-1.webp" alt="Anime 1">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://wallpapersbq.com/images/elfen-lied/elfen-lied-wallpaper-1.webp" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+        <div class="wallpaper-card">
+          <img src="https://c4.wallpaperflare.com/wallpaper/585/391/758/anime-mirai-nikki-yuno-gasai-wallpaper-preview.jpg" alt="Anime 2">
+          <div class="buttons">
+            <button class="like-btn" onclick="like(this)">👍 <span class="like-count">0</span></button>
+            <a href="https://c4.wallpaperflare.com/wallpaper/585/391/758/anime-mirai-nikki-yuno-gasai-wallpaper-preview.jpg" download target="_blank" class="download-btn">⬇️ Baixar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jhon Victor. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function like(button) {
+      const countSpan = button.querySelector('.like-count');
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+      button.style.backgroundColor = '#005fa3';
+    }
+  </script>
+</body>
+</html>
